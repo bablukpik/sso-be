@@ -3,6 +3,12 @@ import passport from "passport";
 
 const authApi = Router();
 
+authApi.get("/users", function (req, res) {
+  res.json({
+    username: "Bablu",
+  });
+});
+
 authApi.get("/saml", passport.authenticate("saml"));
 
 authApi.post(
