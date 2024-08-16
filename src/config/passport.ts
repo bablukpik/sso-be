@@ -1,7 +1,7 @@
 // Configuration file for authentication strategies
 import passport from "passport";
 import {
-  SamlConfig,
+  // SamlConfig,
   Strategy as SamlStrategy,
   VerifiedCallback,
 } from "@node-saml/passport-saml";
@@ -11,7 +11,7 @@ import { findByEmail, findByNameID } from "../models/userModel";
 import { User as CustomUser } from "../types/User";
 
 // Define the SAML strategy configuration
-const samlConfig: SamlConfig = {
+const samlConfig: any = {
   path: "/login/callback",
   entryPoint: "https://openidp.feide.no/simplesaml/saml2/idp/SSOService.php",
   issuer: "passport-saml",

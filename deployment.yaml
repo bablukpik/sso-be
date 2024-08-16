@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sso-be
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sso-be
+  template:
+    metadata:
+      labels:
+        app: sso-be
+    spec:
+      containers:
+        - name: sso-be
+          image: bablukpik/sso-be:latest
+          ports:
+            - containerPort: 8000
